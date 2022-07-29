@@ -13,17 +13,8 @@ document.getElementById("signupform").addEventListener("submit", event => {
 })
 
 document.getElementById("namediv").addEventListener("input", () => {
-    let fvalue = document.getElementById("firstname").value;
-    let lvalue = document.getElementById("lastname").value;
-    
-    if(regexp.test(fvalue) || regexp.test(lvalue)){
-        let val1 = fvalue.replace(/[\~\!\@\#\$\%\^\&\*\(\)\_\+\-\=\[\]\{\}\|\;\'\:\"\,\.\<\>\?]/g, "");
-        let val2 = lvalue.replace(/[\~\!\@\#\$\%\^\&\*\(\)\_\+\-\=\[\]\{\}\|\;\'\:\"\,\.\<\>\?]/g, "");
-        document.getElementById("firstname").value = val1;
-        document.getElementById("lastname").value = val2;
-    }else{
-        return true;
-    }
+    document.getElementById("firstname").value = document.getElementById("firstname").value.replace(/[\~\!\@\#\$\%\^\&\*\(\)\_\+\-\=\[\]\{\}\|\;\'\:\"\,\.\<\>\?]/g, "");
+    document.getElementById("lastname").value = document.getElementById("lastname").value.replace(/[\~\!\@\#\$\%\^\&\*\(\)\_\+\-\=\[\]\{\}\|\;\'\:\"\,\.\<\>\?]/g, "");
 })
 
 document.querySelector("#username").addEventListener("input", event => {

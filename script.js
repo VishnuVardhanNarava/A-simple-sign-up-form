@@ -1,4 +1,5 @@
 let regexp = /[\~\!\@\#\$\%\^\&\*\(\)\_\+\-\=\[\]\{\}\|\;\'\:\"\,\.\<\>\?]/g;
+let regexp01 = /@/g;
 
 document.getElementById("signupform").addEventListener("input", ()=>{
     let usrname = document.getElementById("username").value;
@@ -62,6 +63,22 @@ document.getElementById("password").addEventListener("input", event => {
         document.getElementById("warn").style.color = "red";
     }else{
         document.getElementById("warn").style.color = "transparent";
+    }
+})
+
+//To convert any uppercase character into lowercase and to validate the email id's
+
+document.getElementById("emailid").addEventListener("input", () =>{
+    document.getElementById("emailid").value = document.getElementById("emailid").value.toLowerCase();
+    let eid = document.getElementById("emailid").value;
+    eid = document.getElementById("emailid").value.toLowerCase();
+
+    if(!regexp01.test(eid) && eid != ""){
+        document.getElementById("emailid").style.border = "2px solid red";
+    }else if(regexp01.test(eid)){
+        document.getElementById("emailid").style.border = "0px solid transparent";
+    }else{
+        document.getElementById("emailid").style.border = "0px solid transparent";
     }
 })
 

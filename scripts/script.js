@@ -68,8 +68,8 @@ document.querySelector("#username").addEventListener("input", () => {
 
 //To warn the user if there are is no special character included in the password field
 
-document.getElementById("password").addEventListener("input", event => {
-    let pvalue = event.target.value;
+document.getElementById("password").addEventListener("input", () => {
+    let pvalue = document.getElementById("password").value;
     if(!regexp.test(pvalue) && pvalue != ""){
         document.getElementById("password").style.border = "2px solid red"
         document.getElementById("confirmpassword").disabled = true;

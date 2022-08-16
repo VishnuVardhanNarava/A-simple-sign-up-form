@@ -68,14 +68,17 @@ document.querySelector("#username").addEventListener("input", () => {
 
 //To warn the user if there are is no special character included in the password field
 
-document.getElementById("password").addEventListener("change", event => {
+document.getElementById("password").addEventListener("input", event => {
     let pvalue = event.target.value;
-    if(!regexp.test(pvalue) && !pvalue == ""){
+    if(!regexp.test(pvalue) && pvalue != ""){
         document.getElementById("password").style.border = "2px solid red"
-    }else if(regexp.test(pvalue) && !pvalue == ""){
+        document.getElementById("confirmpassword").disabled = true;
+    }else if(regexp.test(pvalue) && pvalue != ""){
         document.getElementById("password").style.border = "0px solid transparent"
+        document.getElementById("confirmpassword").disabled = false;
     }else{
         document.getElementById("password").style.border = "0px solid transparent"
+        document.getElementById("confirmpassword").disabled = false;
     }
 })
 

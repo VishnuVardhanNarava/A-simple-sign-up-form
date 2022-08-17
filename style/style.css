@@ -10,9 +10,9 @@ body{
     color: white;
     border-radius: 5px;
     border: 2px ridge rgb(100, 100, 100);
-    background-color: rgba(12, 14, 15, 0.5);
-    height: 700px;
-    width: 600px;
+    background-color: rgba(12, 14, 15, 0.385);
+    height: 670px;
+    width: 550px;
     display: inline-block;
     margin-top: 15mm;
     margin-bottom: -15mm;
@@ -23,13 +23,34 @@ body{
     display: inline-flex;
 }
 
-#h11{
+#signup{
     margin-bottom: 20px;
+    margin-top: 10px;
+    padding: 0px;
+    border: 2px solid transparent;
+    border-bottom-color: white;
+    border-radius: 0px;
+    font-size: 30px;
+    color: white;
+    background-color: transparent;
+    height: inherit;
+    width: auto;
 }
 
-#h12{
-    margin-left: 330px;
-    margin-right: -330px;
+#signin{
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-left: 300px;
+    margin-right: -300px;
+    padding: 0px;
+    border: 2px solid transparent;
+    border-bottom-color: white;
+    border-radius: 0px;
+    font-size: 30px;
+    color: white;
+    background-color: transparent;
+    height: inherit;
+    width: auto;
 }
 
 h4{
@@ -50,8 +71,10 @@ input:hover{
     box-shadow: 0px 0px 8px 1px #5dabe7;
 }
 
-button{
-    background-color: rgba(223, 242, 251, 0.5);
+#submit{
+    background-color: rgba(153, 152, 152, 0.273);
+    color: white;
+    font-size: 18px;
     margin-top: 30px;
     width: 120px;
     height: 35px;
@@ -60,6 +83,6 @@ button{
     transition: box-shadow 300ms ease-in-out;
 }
 
-button:hover{
+#submit:hover{
     box-shadow: 0px 0px 5px 2px #5dabe7;
 }

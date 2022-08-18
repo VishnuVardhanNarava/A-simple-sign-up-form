@@ -2,8 +2,7 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
 }
-
-#signupform{
+form{
     text-align: left;
     padding-left: 40px;
     padding-right: -40px;
@@ -52,16 +51,18 @@ body{
 
 h4{
     margin-bottom: 4px;
+    margin-left: 200px;
 }
 
 input{
     width: 300px;
     height: 30px;
+    margin-left: 200px;
     border-radius: 5px;
     border: 0px solid transparent;
     outline: 0px;
     padding-left: 10px;
-    transition: box-shadow 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out;;
 }
 
 input:hover{
@@ -72,7 +73,8 @@ button{
     background-color: rgba(153, 152, 152, 0.273);
     color: white;
     font-size: 18px;
-    margin-top: 30px;
+    margin-top: 50px;
+    margin-left: 200px;
     width: 120px;
     height: 35px;
     border-radius: 9px;
@@ -83,4 +85,17 @@ button{
 #submit:hover{
     box-shadow: 0px 0px 5px 2px #5dabe7;
     cursor: pointer;
+}
+
+.inputfields{
+    margin-top: 50px;
+}
+
+#passworddiv{
+    margin-top: 50px;
+}
+
+#warn{
+    margin-top: 50px;
+    color: transparent;
 }

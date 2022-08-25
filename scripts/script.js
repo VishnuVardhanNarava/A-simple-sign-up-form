@@ -24,22 +24,6 @@ document.getElementById("signupform").addEventListener("input", ()=>{
     document.querySelector("#emailid").value = emailid.replace(/[\~\!\#\$\%\^\&\*\(\)\_\+\-\=\[\]\{\}\|\;\'\:\"\,\<\>\?\/]/g, "");
     document.getElementById("username").value = document.getElementById("username").value.replace(/[\~\!\@\#\$\%\^\&\*\(\)\_\+\-\=\[\]\{\}\|\;\'\:\"\,\.\<\>\?]/g, "");
 
-    if(!regexp.test(password) && password != ""){
-        document.getElementById("password").style.border = "2px solid red"
-        document.getElementById("confirmpassword").disabled = true;
-    }else if(regexp.test(password) || password == ""){
-        document.getElementById("password").style.border = "0px solid transparent"
-        document.getElementById("confirmpassword").disabled = false;
-    }else{
-        document.getElementById("password").style.border = "0px solid transparent"
-        document.getElementById("confirmpassword").disabled = false;
-    }
-    
-    if(!regexpdom01.test(emailid) && !regexpdom02.test(emailid) && !regexpdom03.test(emailid) && emailid != ""){
-        document.getElementById("emailid").style.border = "2px solid red";
-    }else{
-        document.getElementById("emailid").style.border = "0px solid transparent";
-    }
 
     if(!regexp.test(usrname) && usrname != "" && regexp.test(password) && password == cpassword && regexpdom01.test(emailid) || regexpdom02.test(emailid) || regexpdom03.test(emailid)){
         document.getElementById("submit").disabled = false;
@@ -54,16 +38,84 @@ document.getElementById("signupform").addEventListener("input", ()=>{
     }
 })
 
+document.getElementById("emailid").addEventListener("change", () =>{
+    let emailid = document.getElementById("emailid").value;
+
+    function createwarn(){
+        const warn0 = document.createElement("span");
+        warn0.id = "warnspan0";
+        warn0.textContent = `\u24D8 Enter valid email id`;
+        warn0.style.marginLeft = "-185px";
+        warn0.style.color = "#C2432E";
+        warn0.style.fontSize = "13px"
+        let a = document.getElementById("usernamediv");
+        let parentelement = a.parentNode;
+        parentelement.insertBefore(warn0, a);
+        }
+
+    function deletewarn(){
+        let delwarn0 = document.getElementById("warnspan0");
+        delwarn0.remove();
+    }
+
+    if(!regexpdom01.test(emailid) && !regexpdom02.test(emailid) && !regexpdom03.test(emailid) && emailid != ""){
+        document.getElementById("emailid").style.border = "2px solid #C2432E";
+        let predel = document.getElementById("warnspan0");
+        createwarn();
+    }else{
+        deletewarn();
+        document.getElementById("emailid").style.border = "0px solid transparent";
+    }
+});
+
+document.getElementById("password").addEventListener("change", ()=>{
+    let password = document.getElementById("password").value;
+
+    function createwarn(){
+        let warn1 = document.createElement("span");
+        warn1.id = "warnspan1";
+        warn1.textContent = `\u24D8 password should contain atleast one special character`;
+        warn1.style.color = "#C2432E";
+        warn1.style.marginLeft = "12px"
+        warn1.style.fontSize = "13px"
+        let a = document.getElementById("confirmpassworddiv");
+        let parentelement = a.parentNode;
+        parentelement.insertBefore(warn1, a);
+    }
+
+    function deletewarn(){
+        let delwarn1 = document.getElementById("warnspan1");
+        delwarn1.remove();
+    }
+
+    if(!regexp.test(password) && password != ""){
+        document.getElementById("password").style.border = "2px solid #C2432E";
+        document.getElementById("confirmpassword").disabled = true;
+        createwarn();
+    }else if(regexp.test(password) || password == ""){
+        deletewarn();
+        document.getElementById("password").style.border = "0px solid transparent"
+        document.getElementById("confirmpassword").disabled = false;
+    }else{
+        deletewarn();
+        document.getElementById("password").style.border = "0px solid transparent"
+        document.getElementById("confirmpassword").disabled = false;
+    }
+})
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 document.getElementById("signupform").addEventListener("submit", event => {
     event.preventDefault();
     let firstname = document.getElementById("firstname").value;
     let lastname = document.getElementById("lastname").value;
+    let emailid = document.getElementById("emailid").value;
     let usrname = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
     let cpassword = document.getElementById("confirmpassword").value;
     alert(`First Name: ${firstname}
 Last Name: ${lastname}
 UserName: ${usrname}
 Password: ${cpassword}`);
+    document.getElementById("firstname").value = "";
 })

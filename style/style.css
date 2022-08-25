@@ -1,57 +1,37 @@
 body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
+    background-image: url(/A-simple-sign-up-form/imgs/retro-pattern-vector-dark-wallpaper-preview.jpg);
 }
 
 #signupform{
-    text-align: left;
-    padding-left: 40px;
-    padding-right: -40px;
     color: white;
     border-radius: 5px;
     border: 2px ridge rgb(100, 100, 100);
     background-color: rgba(12, 14, 15, 0.385);
-    height: 670px;
+    height: 780px;
     width: 550px;
     display: inline-block;
     margin-top: 15mm;
     margin-bottom: -15mm;
 }
 
-#headers{
-    display: inline-flex;
-}
-
-#signup{
-    margin-bottom: 20px;
+#mainicon{
+    width: 80px;
     margin-top: 10px;
-    padding: 0px;
-    border: 0px solid transparent;
-    border-radius: 0px;
-    font-size: 30px;
-    color: white;
-    background-color: transparent;
-    height: inherit;
-    width: auto;
+    margin-bottom: -15px;
 }
 
-#login{
-    margin-bottom: 20px;
-    margin-top: 10px;
-    margin-left: 320px;
-    margin-right: -320px;
-    padding: 0px;
-    border: 0px solid transparent;
-    border-radius: 0px;
-    font-size: 30px;
-    color: white;
-    background-color: transparent;
-    height: inherit;
-    width: auto;
-}
-
-h4{
+#hfirstname, #hlastname, #hemailid, #husername, #hpassword, #hconfirmpassword{
     margin-bottom: 4px;
+    text-align: left;
+    margin-left: 120px;
+    font-size: small;
+
+}
+
+#star0, #star1, #star2, #star3, #star4, #star5{
+    color: rgb(174, 29, 29);
 }
 
 input{

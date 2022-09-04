@@ -6,10 +6,8 @@ body{
 
 #signupform{
     color: white;
-    border-radius: 5px;
-    border: 2px ridge rgb(100, 100, 100);
     background-color: rgba(12, 14, 15, 0.385);
-    height: 780px;
+    height: 750px;
     width: 550px;
     display: inline-block;
     margin-top: 15mm;
@@ -53,10 +51,12 @@ button{
     color: white;
     font-size: 18px;
     margin-top: 30px;
-    width: 120px;
+    width: 315px;
     height: 35px;
     border-radius: 9px;
-    border-width: 0px;
+    border: 0px solid transparent;
+    outline: 0px;
+    padding-left: 10px;
     transition: box-shadow 300ms ease-in-out;
 }
 

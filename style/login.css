@@ -1,68 +1,40 @@
 body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
+    background-image: url(/A-simple-sign-up-form/imgs/retro-pattern-vector-dark-wallpaper-preview.jpg);
 }
-form{
-    text-align: left;
-    padding-left: 40px;
-    padding-right: -40px;
+
+#loginform{
     color: white;
-    border-radius: 5px;
-    border: 2px ridge rgb(100, 100, 100);
     background-color: rgba(12, 14, 15, 0.385);
-    height: 670px;
+    height: 750px;
     width: 550px;
     display: inline-block;
     margin-top: 15mm;
     margin-bottom: -15mm;
 }
 
-#headers{
-    display: inline-flex;
+#mainicon{
+    width: 90px;
+    margin-top: 30px;
+    margin-bottom: 5px;
 }
 
-#signup{
-    margin-bottom: 20px;
-    margin-top: 10px;
-    padding: 0px;
-    border: 0px solid transparent;
-    border-radius: 0px;
-    font-size: 30px;
-    color: white;
-    background-color: transparent;
-    height: inherit;
-    width: auto;
-}
-
-#login{
-    margin-bottom: 20px;
-    margin-top: 10px;
-    margin-left: 320px;
-    margin-right: -320px;
-    padding: 0px;
-    border: 0px solid transparent;
-    border-radius: 0px;
-    font-size: 30px;
-    color: white;
-    background-color: transparent;
-    height: inherit;
-    width: auto;
-}
-
-h4{
+#husername, #hpassword{
     margin-bottom: 4px;
-    margin-left: 200px;
+    text-align: left;
+    margin-left: 120px;
+    font-size: small;
 }
 
 input{
     width: 300px;
     height: 30px;
-    margin-left: 200px;
     border-radius: 5px;
     border: 0px solid transparent;
     outline: 0px;
     padding-left: 10px;
-    transition: box-shadow 300ms ease-in-out;;
+    transition: box-shadow 300ms ease-in-out;
 }
 
 input:hover{
@@ -74,11 +46,12 @@ button{
     color: white;
     font-size: 18px;
     margin-top: 50px;
-    margin-left: 200px;
-    width: 120px;
+    width: 315px;
     height: 35px;
     border-radius: 9px;
-    border-width: 0px;
+    border: 0px solid transparent;
+    outline: 0px;
+    padding-left: 10px;
     transition: box-shadow 300ms ease-in-out;
 }
 
@@ -87,15 +60,10 @@ button{
     cursor: pointer;
 }
 
-.inputfields{
+#usernamediv{
     margin-top: 50px;
 }
 
 #passworddiv{
     margin-top: 50px;
-}
-
-#warn{
-    margin-top: 50px;
-    color: transparent;
 }

@@ -7,25 +7,25 @@
     <title>Sign-in</title>
     <link rel="stylesheet" href="style/login.css">
 </head>
-<body background="imgs/retro-pattern-vector-dark-wallpaper-preview.jpg">
+<body>
     <form action="" id="loginform">
         <div id="headers">
-            <a href="index.html" id="signup" class="headerbuttons">Sign Up</a>
-            <a href="login.html" id="login" class="headerbuttons">Log In</a>
-    </div>
-    <div class="inputfields">
+            <img id="mainicon" src="imgs/icon.png" alt="">
+            <h1 id="header1">Sign In To Your Account</h1>
+            <h4 id="header2">Don't have an account? <a href="index.html">SIGN UP</a></h4>
+        </div>
+   <div id="inputfields">
         <div id="usernamediv">
-        <h4 id="h41">Username</h4>
-        <input type="text" placeholder="User Name" name="UserName" id="username" minlength="9" maxlength="9">
+            <h4 id="husername">Username</h4>
+            <input type="text" placeholder="User Name" name="UserName" id="username" minlength="9" maxlength="9">
         </div>
         <div id="passworddiv">
-        <h4 id="h42">Password</h4>
-        <input type="text" placeholder="Password" name="Password" id="password" minlength="9" maxlength="9">
+            <h4 id="hpassword">Password</h4>
+            <input type="text" placeholder="Password" name="Password" id="password" minlength="9" maxlength="9">
         </div>
-        <button type="submit" id="submit" name="submit" disabled="disabled">Login</button>
+            <button type="submit" id="submit" name="submit" disabled="disabled">Login</button>
     </div>
-        <h5 id="warn">Incorrect username or password</h5>
     </form>
-    <script src="scripts/login.js"></script>
+<script src="scripts/login.js"></script>
 </body>
 </html>

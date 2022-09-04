@@ -43,7 +43,7 @@ document.getElementById("emailid").addEventListener("change", () =>{
 
     function createwarn(){
         const warn0 = document.createElement("span");
-        warn0.id = "warnspan0";
+        warn0.id = "warnspan";
         warn0.textContent = `\u24D8 Enter valid email id`;
         warn0.style.marginLeft = "-185px";
         warn0.style.color = "#C2432E";
@@ -51,20 +51,21 @@ document.getElementById("emailid").addEventListener("change", () =>{
         let a = document.getElementById("usernamediv");
         let parentelement = a.parentNode;
         parentelement.insertBefore(warn0, a);
-        }
+    }
 
     function deletewarn(){
-        let delwarn0 = document.getElementById("warnspan0");
+        let delwarn0 = document.getElementById("warnspan");
         delwarn0.remove();
+    }
+
+    if(document.getElementById("warnspan")){
+        deletewarn();
+        document.getElementById("emailid").style.border = "0px solid transparent";
     }
 
     if(!regexpdom01.test(emailid) && !regexpdom02.test(emailid) && !regexpdom03.test(emailid) && emailid != ""){
         document.getElementById("emailid").style.border = "2px solid #C2432E";
-        let predel = document.getElementById("warnspan0");
         createwarn();
-    }else{
-        deletewarn();
-        document.getElementById("emailid").style.border = "0px solid transparent";
     }
 });
 

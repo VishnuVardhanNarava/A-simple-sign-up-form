@@ -89,18 +89,15 @@ document.getElementById("password").addEventListener("change", ()=>{
         delwarn1.remove();
     }
 
+    if(document.getElementById("warnspan1")){
+        deletewarn();
+        document.getElementById("password").style.border = "0px solid transparent";
+    }
+
     if(!regexp.test(password) && password != ""){
         document.getElementById("password").style.border = "2px solid #C2432E";
         document.getElementById("confirmpassword").disabled = true;
         createwarn();
-    }else if(regexp.test(password) || password == ""){
-        deletewarn();
-        document.getElementById("password").style.border = "0px solid transparent"
-        document.getElementById("confirmpassword").disabled = false;
-    }else{
-        deletewarn();
-        document.getElementById("password").style.border = "0px solid transparent"
-        document.getElementById("confirmpassword").disabled = false;
     }
 })
 

@@ -2,12 +2,6 @@ const regexp = /[\~\!\@\#\$\%\^\&\*\(\)\_\+\=\[\]\{\}\|\;\'\:\"\,\.\<\>\?\/]/;
 let regexpdom01 = /@gmail.com/;
 let regexpdom02 = /@yahoo.com/;
 let regexpdom03 = /@hotmail.com/;
-let firstname = document.getElementById("firstname").value;
-let lastname = document.getElementById("lastname").value;
-let emailid = document.getElementById("emailid").value;
-let username = document.getElementById("username").value;
-let password = document.getElementById("setpassword").value;
-let cpassword = document.getElementById("confirmpassword").value;
 
 function warningmessage(para, message, margin){
     let warn = document.createElement("span");
@@ -107,6 +101,12 @@ document.getElementById("password").addEventListener("input", ()=>{
 /////////////////////////////////////Submit///////////////////////////////////////////
 
 document.getElementById("signupform").addEventListener("input", ()=>{
+    let firstname = document.getElementById("firstname").value;
+    let lastname = document.getElementById("lastname").value;
+    let emailid = document.getElementById("emailid").value;
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("setpassword").value;
+    let cpassword = document.getElementById("confirmpassword").value;
 
     if(!regexp.test(firstname) && firstname != "" && !regexp.test(lastname) && lastname != "" && !regexp.test(username) && username != "" && regexp.test(password) && password != "" && cpassword == password && cpassword != "" && regexpdom01.test(emailid) || regexpdom02.test(emailid) || regexpdom03.test(emailid) && emailid != ""){
         document.getElementById("submit").disabled = false;
@@ -118,4 +118,10 @@ document.getElementById("signupform").addEventListener("input", ()=>{
 document.getElementById("signupform").addEventListener("submit", event=>{
     event.preventDefault();
     alert("Submitted successfully");
-}); 
+    document.getElementById("firstname").value = "";
+    document.getElementById("lastname").value = "";
+    document.getElementById("emailid").value = "";
+    document.getElementById("username").value = "";
+    document.getElementById("setpassword").value = "";
+    document.getElementById("confirmpassword").value = "";
+});
